@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		33D06B151AE458D40012334D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D06B141AE458D40012334D /* AppDelegate.swift */; };
-		33D06B171AE458D40012334D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D06B161AE458D40012334D /* ViewController.swift */; };
+		33D06B171AE458D40012334D /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D06B161AE458D40012334D /* ChooseViewController.swift */; };
 		33D06B1A1AE458D40012334D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D06B181AE458D40012334D /* Main.storyboard */; };
 		33D06B1C1AE458D40012334D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D06B1B1AE458D40012334D /* Images.xcassets */; };
 		33D06B1F1AE458D40012334D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D06B1D1AE458D40012334D /* LaunchScreen.xib */; };
 		33D06B2B1AE458D40012334D /* RoshamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D06B2A1AE458D40012334D /* RoshamboTests.swift */; };
+		33D06B371AE4681D0012334D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D06B361AE4681D0012334D /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		33D06B0F1AE458D40012334D /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D06B131AE458D40012334D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33D06B141AE458D40012334D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33D06B161AE458D40012334D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33D06B161AE458D40012334D /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		33D06B191AE458D40012334D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33D06B1B1AE458D40012334D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33D06B1E1AE458D40012334D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		33D06B241AE458D40012334D /* RoshamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D06B291AE458D40012334D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33D06B2A1AE458D40012334D /* RoshamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboTests.swift; sourceTree = "<group>"; };
+		33D06B361AE4681D0012334D /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				33D06B141AE458D40012334D /* AppDelegate.swift */,
-				33D06B161AE458D40012334D /* ViewController.swift */,
+				33D06B161AE458D40012334D /* ChooseViewController.swift */,
 				33D06B181AE458D40012334D /* Main.storyboard */,
 				33D06B1B1AE458D40012334D /* Images.xcassets */,
 				33D06B1D1AE458D40012334D /* LaunchScreen.xib */,
 				33D06B121AE458D40012334D /* Supporting Files */,
+				33D06B361AE4681D0012334D /* ResultsViewController.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D06B171AE458D40012334D /* ViewController.swift in Sources */,
+				33D06B171AE458D40012334D /* ChooseViewController.swift in Sources */,
 				33D06B151AE458D40012334D /* AppDelegate.swift in Sources */,
+				33D06B371AE4681D0012334D /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
