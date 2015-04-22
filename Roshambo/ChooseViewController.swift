@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Eric N. Winn. All rights reserved.
 //
 
+// TODO: Add scoring display with persistence
+
 import UIKit
 
 enum Roshambo: Int {
