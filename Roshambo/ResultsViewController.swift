@@ -10,20 +10,21 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
+    @IBOutlet weak var verdictImage: UIImageView!
+    @IBOutlet weak var verdictLabel: UILabel!
     var playerChoice: Roshambo?
     var computerChoice: Roshambo?
-    
-
-    @IBOutlet weak var verdictImage: UIImageView!
-    
-    @IBOutlet weak var verdictLabel: UILabel!
     var verdictBanner: String = ""
+    var youWin: String = " You win!"
+    var youLose: String = " You lose!"
     
     override func viewWillAppear(animated: Bool) {
         
         // verdictImage only appears if both choices have been set
         var pChoice = ""
         var cChoice = ""
+        
+        // Leaving print statements in to illustrate switch enum functionality
         if let playerChoice = self.playerChoice {
             switch playerChoice {
             case .Rock: pChoice = "Rock"
@@ -34,7 +35,6 @@ class ResultsViewController: UIViewController {
         }
         
         if let computerChoice = self.computerChoice {
-            // call the verdict function
             switch computerChoice {
             case .Rock: cChoice = "Rock"
             case .Paper: cChoice = "Paper"
@@ -45,7 +45,7 @@ class ResultsViewController: UIViewController {
         println("----------")
         println("Player's choice: \(pChoice), Computer's choice: \(cChoice)")
         
-        // Display the verdict Image
+        // Start with verdict image and verdict banner hidden
         self.verdictImage.alpha = 0
         verdictLabel.alpha = 0
         
@@ -55,33 +55,38 @@ class ResultsViewController: UIViewController {
             verdictLabel.text = "It's a TIE!"
         } else {
             switch (playerChoice!.rawValue + computerChoice!.rawValue) {
+            // Rock (1) + Paper (2) = 3
             case 3:
                 self.verdictImage.image = UIImage(named: "PaperCoversRock")
                 verdictBanner = "Paper covers Rock."
                 if playerChoice == .Rock {
-                    verdictBanner += " You lose!"
+                    verdictBanner += youLose
                 } else {
-                    verdictBanner += " You win!"
+                    verdictBanner += youWin
                 }
                 verdictLabel.text = verdictBanner
+            // Rock (1) + Scissors (3) = 4
             case 4:
                 self.verdictImage.image = UIImage(named: "RockCrushesScissors")
                 verdictBanner = "Rock crushes Scissors."
                 if playerChoice == .Rock {
-                    verdictBanner += " You win!"
+                    verdictBanner += youWin
                 } else {
-                    verdictBanner += " You lose!"
+                    verdictBanner += youLose
                 }
                 verdictLabel.text = verdictBanner
+            // Scissors (3) + Paper (2) = 5
             case 5:
                 self.verdictImage.image = UIImage(named: "ScissorsCutPaper")
                 verdictBanner = "Scissors cut Paper."
                 if playerChoice == .Scissors {
-                    verdictBanner += " You win!"
+                    verdictBanner += youWin
                 } else {
-                    verdictBanner += " You lose!"
+                    verdictBanner += youLose
                 }
                 verdictLabel.text = verdictBanner
+                
+            // Should never get here, could add an errorImage...
             default:
                 self.verdictImage.image = UIImage(named: "itsATie")
                 verdictLabel.text = "Hmmm, might have a problem!"
@@ -90,17 +95,11 @@ class ResultsViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+        // Fade in the results
         UIView.animateWithDuration(1.5, animations: {
             self.verdictImage.alpha = 1.0
             self.verdictLabel.alpha = 1.0
         })
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func playAgain(sender: UIButton) {

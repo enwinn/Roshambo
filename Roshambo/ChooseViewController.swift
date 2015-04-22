@@ -17,19 +17,15 @@ enum Roshambo: Int {
 
 class ChooseViewController: UIViewController {
     
+    // Generate the computer's choice
+    // Using enum to make the results code easy and fun
     func randomRockPaperScissors() -> Roshambo {
-        // Generate the computer's choice
         let randomValue = 1 + arc4random() % 3
         let computerChoice = Roshambo(rawValue: Int(randomValue))
         
         return computerChoice!
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let controller = segue.destinationViewController as! ResultsViewController
@@ -65,5 +61,3 @@ class ChooseViewController: UIViewController {
     @IBAction func chooseScissors(sender: UIButton) {
     }
 }
-
-	
