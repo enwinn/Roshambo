@@ -96,7 +96,7 @@ class ResultsViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         // Fade in the results
-        UIView.animateWithDuration(1.5, animations: {
+        UIView.animateWithDuration(0.5, animations: {
             self.verdictImage.alpha = 1.0
             self.verdictLabel.alpha = 1.0
         })
