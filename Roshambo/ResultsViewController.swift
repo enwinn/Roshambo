@@ -21,30 +21,6 @@ class ResultsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         // verdictImage only appears if both choices have been set
-        var pChoice = ""
-        var cChoice = ""
-        
-        // Leaving print statements in to illustrate switch enum functionality
-        if let playerChoice = self.playerChoice {
-            switch playerChoice {
-            case .Rock: pChoice = "Rock"
-            case .Paper: pChoice = "Paper"
-            case .Scissors: pChoice = "Scissors"
-            default: println("Player's choice: Something broke, call AAA!")
-            }
-        }
-        
-        if let computerChoice = self.computerChoice {
-            switch computerChoice {
-            case .Rock: cChoice = "Rock"
-            case .Paper: cChoice = "Paper"
-            case .Scissors: cChoice = "Scissors"
-            default: println("Computer's choice: Something broke, call AAA!")
-            }
-        }
-        println("----------")
-        println("Player's choice: \(pChoice), Computer's choice: \(cChoice)")
-        
         // Start with verdict image and verdict banner hidden
         self.verdictImage.alpha = 0
         verdictLabel.alpha = 0
